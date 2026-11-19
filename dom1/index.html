@@ -12,7 +12,7 @@
             <div class="card">
                 <div class="card-body">
                     <label for="input">Ingresa tu nombre:</label>
-                    <input type="text" id="input">
+                    <input type="text" id="input" class="form-control">
                     <button class="btn btn-primary" id="boton">enviar saludo</button>
 
                     <p id="resultado">Hola</p>
@@ -23,16 +23,15 @@
     </div>
     
     <script>
-        const nombreinput= document.getElementById("input");
+        const nombreinput = document.getElementById("input");
         const boton= document.getElementById("boton");
         const resultadoParr=document.getElementById("resultado");
         
-        alert("prueba1");
         boton.addEventListener("click", function() {
-            alert("resultado");
-            const nombre = nombreinput.value.trim();
-            console.log("prueba2");
-            resultado.textContent = `Hola ${resultado}.`;
+            
+            const nombre = nombreinput.value;
+
+            resultadoParr.textContent = `¡Hola, ${nombre}! Bienvenida.`;
         });
     </script>
 </body>
