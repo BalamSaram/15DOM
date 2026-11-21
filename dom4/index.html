@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css">
+    <title>DOM 4</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-6 offset-4">
+            <div class="card">
+                <div class="card-body">
+                    <select name="colores" id="colorsitos">
+                        <option value="disabled" id="trans">--</option>
+                        <option value="azul" id="azul">Azul</option>
+                        <option value="verde" id="verde">Verde</option>
+                        <option value="amarillo" id="amari">Amarillo</option>
+                        <option value="rosa" id="rose">Rosita</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const selector = document.getElementById("colorsitos");
+        const tarjeta = document.querySelector(".card");
+
+        selector.addEventListener("change", function () {
+            if (selector.value === "azul") {
+                tarjeta.style.backgroundColor = "blue";
+            } else if (selector.value === "verde") {
+                tarjeta.style.backgroundColor = "green";
+            } else if (selector.value === "amarillo") {
+                tarjeta.style.backgroundColor = "yellow";
+            } else if (selector.value === "rosa") {
+                tarjeta.style.backgroundColor = "pink";
+            } else if (selector.value === "disabled") {
+                tarjeta.style.backgroundColor = "white";
+            }
+        })
+
+    </script>
+</body>
+
+</html>
