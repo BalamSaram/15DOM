@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css">
+    <title>DOM2</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-6 offset-4">
+            <div class="card">
+                <div class="card-body">
+                    <label for="boton">Contador de clicks</label>
+                    <button class="btn btn-primary" id="boton">Contar clic</button>
+                    <button class="btn btn-success" id="reiniciar">reiniciar</button>
+
+                    <p id="contar">cantidad de clics: 0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const botoncito = document.getElementById("boton");
+        const contador = document.getElementById("contar");
+        const reiniciador = document.getElementById("reiniciar")
+
+        reiniciador.addEventListener("click", function(){
+            cantidadclics=0;
+            contador.textContent=`cantidad de clics= ${cantidadclics}`;
+            boton.style.background="blue";
+        })
+
+        let cantidadclics=0;
+        botoncito.addEventListener("click", function(){
+            cantidadclics= cantidadclics +1;
+            contador.textContent=`cantidad de clics= ${cantidadclics}`;
+            if (cantidadclics>=10){
+                boton.style.background="green";
+            } 
+        });
+    </script>
+</body>
+</html>
