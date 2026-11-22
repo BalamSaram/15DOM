@@ -36,7 +36,22 @@
         const lista = document.querySelector("ul");
         const agregar = document.getElementById("send");
 
-        agregar.addEventListener("click", function(){
+        function agregarTarea(){
+            const texto = tarea.value.trim();
+            const nuevoLi = document.createElement("li");
+            nuevoLi.textContent=`${tarea.value}`;
+            lista.appendChild(nuevoLi);
+
+            tarea.value="";
+        }
+
+        agregar.addEventListener("click", agregarTarea);
+
+        tarea.addEventListener("keydown", function(event) {
+            if (event.key === "Enter"){
+                agregarTarea();
+            }
+        })
             //alert("funciona al menos hasta aqui");
             //const texto = tarea.value.trim();
 
@@ -44,12 +59,12 @@
               //  return;
             //}
 
-            const nuevoLi = document.createElement("li");
-            nuevoLi.textContent=`${tarea.value}`;
-            lista.appendChild(nuevoLi);
+        //    const nuevoLi = document.createElement("li");
+      //      nuevoLi.textContent=`${tarea.value}`;
+    //        lista.appendChild(nuevoLi);
 
-            tarea.value=""; //Esta línea limpia el input para la próxima adiciónnn.
-        })
+            //tarea.value=""; //Esta línea limpia el input para la próxima adiciónnn.
+        //})
     </script>
 </body>
 </html>

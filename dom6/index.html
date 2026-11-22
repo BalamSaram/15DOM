@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css">
+    <title>DOM 5</title>                  
+</head>
+<body>
+    <div class="row">
+        <div class="col-6 offset-3 mt-3">
+            <div class="card">
+                <div class="card-body">
+                    <label for="input">Ingrese su peso</label><br>
+                    <input type="number" id="peso"> <br>
+                    <label for="input">Ingrese su estatura en metros.</label><br>
+                    <input type="number" id="altura"> <br>
+                    <button class="btn btn-primary mt-2" id="send">Calcular IMC</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 offset-3 mt-3">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Sus datos:</h3>
+                    <p id="p1">Su peso es:</p>
+                    <p id="p2">Su altura ingresada:</p>
+                    <p id="iemese">Su IMC aparece aquí!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const pesito = document.getElementById("peso");
+        const heig = document.getElementById("altura");
+        const boton = document.getElementById("send");
+        const resultado = document.getElementById("iemese");
+        const p1mostrado= document.getElementById("p1");
+        const p2mostrado = document.getElementById("p2");
+
+        boton.addEventListener("click", function(){
+            const p1proces=pesito.value;
+            const p2proces=heig.value;
+
+            let imc = p1proces / (p2proces*p2proces);
+
+            resultado.textContent=`Su indice de masa corporal es: ${imc}`;
+            p1mostrado.textContent = `${p1proces}`;
+            p2mostrado.textContent = `${p2proces}`;
+
+            if (imc<=18.5){
+                resultado.style.color="red";
+            } else if (imc>18.5 && imc<=24.9) {
+                resultado.style.color="green";
+            } else if (imc>25 && imc<=29.9) {
+                resultado.style.color="yellow";
+            } else {
+                resultado.style.color="brown";
+            }
+        })
+    </script>
+</body>
+</html>
