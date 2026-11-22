@@ -47,19 +47,33 @@
 
             let imc = p1proces / (p2proces*p2proces);
 
-            resultado.textContent=`Su indice de masa corporal es: ${imc}`;
             p1mostrado.textContent = `${p1proces}`;
             p2mostrado.textContent = `${p2proces}`;
 
-            if (imc<=18.5){
+            if (p1proces==="" && p2proces===""){
+                resultado.textContent=`Ingrese los datos`;
                 resultado.style.color="red";
-            } else if (imc>18.5 && imc<=24.9) {
-                resultado.style.color="green";
-            } else if (imc>25 && imc<=29.9) {
-                resultado.style.color="yellow";
+            } else if (p2proces===""){
+                resultado.textContent=`Ingrese una altura válida.`;
+                resultado.style.color="red";
+            } else if (p1proces==="") {
+                resultado.textContent=`Ingrese el peso`;
+                resultado.style.color="red";
             } else {
-                resultado.style.color="brown";
+                resultado.textContent=`Su indice de masa corporal es: ${imc}`;
+                if (imc<=18.5) {
+                   resultado.style.color="red";
+                } else if (imc>18.5 && imc<=24.9) {
+                    resultado.style.color="green";
+                } else if (imc>25 && imc<=29.9) {
+                    resultado.style.color="yellow";
+                } else {
+                    resultado.style.color="brown";
+                }
             }
+
+            pesito.value="";
+            heig.value="";
         })
     </script>
 </body>
