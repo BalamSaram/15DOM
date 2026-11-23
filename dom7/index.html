@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css">
+    <title>DOM 7</title>                  
+</head>
+<body>
+    <div class="row">
+        <div class="col-6 offset-3 mt-3">
+            <div class="card">
+                <div class="card-body">
+
+                    <label for="input">Ingrese su contraseña</label><br>
+                    <input type="password" id="contraseña"> <br>
+
+                    <p id="seguimiento"></p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const input = document.getElementById("contraseña");
+
+        input.addEventListener("input", function(){
+            const aviso =document.getElementById("seguimiento");
+            //const largo = input.value.length;
+    
+            if (input.value.length < 6 && input.value.length>0) {
+                aviso.style.color="red";
+                aviso.textContent="Contraseña muy corta"
+            } else if (input.value.length >= 6 && input.value.length < 10){
+                aviso.style.color="yellow";
+                aviso.textContent="Contraseña aceptable."
+            } else if (input.value.length === 0){
+                aviso.textContent="";
+            } else {
+                aviso.style.color="green";
+                aviso.textContent="Contraseña fuerte";
+            }
+        })
+    </script>
+</body>
+</html>
