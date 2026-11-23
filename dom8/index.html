@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css">
+    <title>DOM 8</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card">
+                <div class="card-body">
+                    <label for="input1">Escribe un artículo para la lista de compras.</label>
+                    <input type="text" id="Ingresar-tarea">
+                    <p id="campo"></p>
+                    <button class="btn btn-primary" id="send">Añadir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Lista de compras:</h3>
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const tarea = document.getElementById("Ingresar-tarea");
+        const lista = document.querySelector("ul");
+        const agregar = document.getElementById("send");
+        const aviso = document.getElementById("campo");
+
+
+        function agregarTarea() {
+
+            if (tarea.value.length === 0) {
+                aviso.textContent = `Ingrese un elemento válido.`;
+                aviso.style.color = "red";
+            } else {
+                const texto = tarea.value.trim();
+                const nuevoLi = document.createElement("li");
+                nuevoLi.textContent = `${tarea.value}`;
+                lista.appendChild(nuevoLi);
+                tarea.value = "";
+                aviso.textContent=``;
+                return;
+            }
+        }
+
+        agregar.addEventListener("click", agregarTarea);
+
+        tarea.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                agregarTarea();
+                tarea.value = "";
+            }
+        })
+
+        //alert("funciona al menos hasta aqui");
+        //const texto = tarea.value.trim();
+
+        //if (texto === ""){
+        //  return;
+        //}
+
+        //    const nuevoLi = document.createElement("li");
+        //      nuevoLi.textContent=`${tarea.value}`;
+        //        lista.appendChild(nuevoLi);
+
+        //tarea.value=""; //Esta línea limpia el input para la próxima adiciónnn.
+        //})
+    </script>
+</body>
+
+</html>
