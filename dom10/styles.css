@@ -1,0 +1,91 @@
+.card {
+    border: none;
+    width: 600px;
+}
+.card .card-cuerpo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: gray;
+    border-radius: 20px;
+    width: 120px;
+    padding: 2rem;
+}
+.btn {
+    border-radius: 100%;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+}
+.btn-verde-off {
+    border-radius: 100%;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+}
+
+.btn-verde-on {
+    border-radius: 100%;
+    border: 1px solid rgb(88, 87, 87);
+    width: 50px;
+    height: 50px;
+    background-color: greenyellow;
+    box-shadow: 0 0 0.2rem 0.5rem greenyellow;
+}
+
+.btn-amarillo-off {
+    border-radius: 100%;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+}
+
+.btn-amarillo-on {
+    border-radius: 100%;
+    border: 1px solid rgb(88, 87, 87);
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    box-shadow: 0 0 0.2rem 0.5rem yellow;
+}
+
+.btn-rojo-off {
+    border-radius: 100%;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+}
+
+.btn-rojo-on {
+    border-radius: 100%;
+    border: 1px solid rgb(88, 87, 87);
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    box-shadow: 0 0 0.2rem 0.5rem red;
+}
+
+.act-verde, .act-amarillo, .act-rojo {
+    border-radius: 50px;
+    background-color: #fff;
+    padding: 1.5rem;
+}
+
+.act-verde:hover{
+    box-shadow:0 0 0.2rem 0.5rem greenyellow;
+    color: yellowgreen;
+    border: none;
+}
+
+.act-amarillo:hover{
+    box-shadow:0 0 0.2rem 0.5rem yellow;
+    color: yellow;
+    border: none;
+}
+
+.act-rojo:hover{
+    box-shadow:0 0 0.2rem 0.5rem red;
+    color: red;
+    border: none;
+}
