@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>DOM 11</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-5 offset-3 mt-2">
+            <div class="card">
+                <div class="card-body" style="background-color: beige;">
+                    <form action="" ><!--El action se puede dejar vacío bc especifica la url o ruta donde se mandarán los datos que se validen en el formulario, en este caso no aplica-->
+                        <label for="input">Ingrese su nombre.</label><br>
+                        <input type="text" class="form-control" id="input-Nombre">
+                        <p id="revNombre"></p>
+                        <br>
+
+                        <label for="input">Ingrese su correo.</label><br>
+                        <input type="email" class="form-control" id="input-Correo">
+                        <p id="revCorreo"></p>
+                        <br>
+
+                        <label for="input">Ingrese su edad.</label><br>
+                        <input type="number" class="form-control" id="input-Edad">
+                        <p id="revEdad"></p>
+                        <br>
+
+                        <button type="button" class="btn btn-success" id="boton">Registrarme</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./javascript.js"></script>
+</body>
+</html>
