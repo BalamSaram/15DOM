@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>DOM 12</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-7 offset-2 mt-3">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="fs-3">Generador de tabla de multiplicar.</h1>
+                    <label for="">
+                        <small>Ingrese un número para conocer su tabla de multiplicar</small>
+                    </label>
+                    <input type="number" name="idk" id="num" class="form-control">
+                    <button class="btn btn-success mt-3" id="enviar">Generar tabla</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-7 offset-2 mt-3">
+            <div class="card">
+                <div class="card-body">
+                    <h2 id="Titulo"></h2>
+                    <table id="tabla" class="table">
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./javascript.js"></script>
+</body>
+</html>
