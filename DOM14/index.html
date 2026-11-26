@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>DOM 14</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-12 col-md-10 col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    <label for="">Presupoint inicial:</label>
+                    <input type="number" class="form-control" id="presupuestoInicial">
+
+                    <label for="">Tipo de gasto:</label>
+                    <input type="text" class="form-control" id="tipoGasto">
+
+                    <label for="">Gasto:</label>
+                    <input type="number" class="form-control" id="gastoCantidad">
+
+                    <button class="btn btn-success mt-3" id="enviar">Agregar gasto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-10 col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    <h2>Presupuesto disponible:</h2>
+                    <span id="mostrarPresupuestoInicial"></span>
+
+                    <h2>Lista de gastos</h2>
+                    <ul>
+
+                    </ul>
+
+                    <h2>Resumen:</h2>
+
+                    <span id="TotalGastado">Total gastado:</span><br>
+                    <span id="Restante">Restante:</span>
+                    <br><span id="Extra"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./javascript.js"></script>
+</body>
+</html>
+
+
